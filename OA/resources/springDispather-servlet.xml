@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:p="http://www.springframework.org/schema/p" 
+	xmlns:context="http://www.springframework.org/schema/context" 
+	xmlns:mvc="http://www.springframework.org/schema/mvc" 
+	xsi:schemaLocation="
+    http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.2.xsd
+    http://www.springframework.org/schema/mvc
+    http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+    ">
+    <!-- 默认扫描的包路径 -->
+    <context:component-scan base-package="com.*" />
+   
+    <!-- 添加注解驱动 -->
+    <mvc:annotation-driven />
+   
+    <!-- 定义跳转的文件的前后缀 -->
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/" />
+        <property name="suffix" value=".jsp" />
+    </bean>
+   
+    <!-- 处理JSON数据转换的 -->  
+    <bean id="mappingJacksonHttpMessageConverter"   
+        class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">   
+   <!--      为了处理返回的JSON数据的编码，默认是ISO-88859-1的，这里把它设置为UTF-8,解决有乱码的情况    -->
+        <property name="supportedMediaTypes">    
+            <list>    
+                  <value>text/html;charset=UTF-8</value>    
+            </list>    
+        </property>    
+    </bean>    
+	
+	
+	
+	<!--这个ViewResolver 的具体原来没细究，不过CV战士们 中的一员，这样用是没问题的(参考官文) -->  
+ <!--   <bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">  
+      <property name="mediaTypes">  
+        <map>  
+          <entry key="json" value="application/json"/>  -->  <!-- 告诉视图解析器 返回的类型为json 格式 -->  
+     <!--    </map>  
+      </property>  
+      <property name="defaultViews">  
+        <list>   -->
+          <!-- 这个 View 比较重要,ModelAndView 里的数据变成JSON -->  
+       <!--    <bean class="org.springframework.web.servlet.view.json.MappingJacksonJsonView">  
+          </bean>  
+        </list>  
+      </property>  
+    </bean>  
+ -->	
+	
+	<!-- 对静态资源文件的访问  方案一 （二选一） -->  
+    <mvc:default-servlet-handler/>  
+      
+    <!-- 对静态资源文件的访问  方案二 （二选一）-->  
+    <mvc:resources mapping="/images/**" location="/images/" cache-period="31556926"/>  
+    <mvc:resources mapping="/js/**" location="/js/" cache-period="31556926"/>  
+    <mvc:resources mapping="/css/**" location="/css/" cache-period="31556926"/>  
+	   
+	<!-- 定义并配置拦截器  -->   
+    <mvc:interceptors>
+    	<mvc:interceptor>
+    		<mvc:mapping path="/**" />
+    		<mvc:exclude-mapping path="/user/*"/> 
+    		<bean  class="com.interceptor.MyInterceptor"></bean>
+    	</mvc:interceptor>
+    </mvc:interceptors>
+    
+</beans>
