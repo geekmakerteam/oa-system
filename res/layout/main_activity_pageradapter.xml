@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1" >
+
+        <GridView
+            android:id="@+id/main_activity_pageradapter_gv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:numColumns="2" >
+        </GridView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/main_activity_pageradapter_pageNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/main_activity_pageradapter_pagenum_bg"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/main_activity_pageradapter_settting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="61dp"
+                android:background="@drawable/main_activity_pageradapter_btn_settting_selector" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

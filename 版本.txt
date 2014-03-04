@@ -1,0 +1,1 @@
+重新修改了界面，使设置按钮和显示页数的TextView一起和ViewPager滑动。
