@@ -1,0 +1,48 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:id="@+id/student_part_time_job_stage_3_tv_title"
+        style="?android:attr/listSeparatorTextViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/repair_activity_tv_head_space_bottom"
+        android:gravity="center"
+        android:text="志愿审核结果" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="图片证明：" />
+
+    <ImageView
+        android:id="@+id/student_part_time_job_stage_3_iv_picture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/ic_launcher" />
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="审核结果:" />
+
+        <TextView
+            android:id="@+id/student_part_time_job_stage_3_tv_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="第一志愿：信息部被录取了:" />
+    </TableRow>
+
+</TableLayout>

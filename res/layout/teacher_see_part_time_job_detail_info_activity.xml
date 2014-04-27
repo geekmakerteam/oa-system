@@ -1,0 +1,98 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/teacher_see_part_time_job_detail_info_tv_title"
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/repair_activity_tv_head_space_bottom"
+            android:gravity="center"
+            android:text="标题" />
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="姓名：" />
+
+            <TextView
+                android:id="@+id/teacher_see_part_time_job_detail_info_tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="陈轲" />
+        </TableRow>
+
+        <TextView
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/repair_activity_tv_head_space_bottom"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="证明信息：" />
+
+        <ImageView
+            android:id="@+id/teacher_see_part_time_job_detail_info_iv_picture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/teacher_see_part_time_job_detail_info_tv_teacher_choice"
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/repair_activity_tv_head_space_bottom"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="请选择该同学的去向" />
+
+        <RadioGroup
+            android:id="@+id/teacher_see_part_time_job_detail_info_rg_all_wish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/teacher_see_part_time_job_detail_info_rb_wish_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="科技部" />
+
+            <RadioButton
+                android:id="@+id/teacher_see_part_time_job_detail_info_rb_wish_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="工作室" />
+
+            <RadioButton
+                android:id="@+id/teacher_see_part_time_job_detail_info_rb_wish_refuse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="拒绝请求" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/teacher_see_part_time_job_detail_info_btn_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="提交" >
+        </Button>
+    </TableLayout>
+
+</ScrollView>

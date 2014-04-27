@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginTop="12dp"
+    android:orientation="vertical" >
+
+    <TextView
+        style="?android:attr/listSeparatorTextViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/repair_activity_tv_head_space_bottom"
+        android:text="@string/teacher_add_class_activity_select_course_time" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="30dp" >
+
+        <kankan.wheel.widget.WheelView
+            android:id="@+id/teacher_add_class_activity_zhou"
+            android:layout_width="0dip"
+            android:layout_height="200dp"
+            android:layout_weight="1" />
+
+        <kankan.wheel.widget.WheelView
+            android:id="@+id/teacher_add_class_activity_xingqi"
+            android:layout_width="0dip"
+            android:layout_height="200dp"
+            android:layout_weight="1" />
+
+        <kankan.wheel.widget.WheelView
+            android:id="@+id/teacher_add_class_activity_jie"
+            android:layout_width="0dip"
+            android:layout_height="200dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <com.iangclifton.android.floatlabel.FloatLabel
+        android:id="@+id/teacher_add_class_activity_tv_course_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:hint="@string/teacher_add_class_activity_select_course_name" />
+
+    <Button
+        android:id="@+id/teacher_add_class_activity_btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="提交" />
+
+</LinearLayout>

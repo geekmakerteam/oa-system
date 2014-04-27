@@ -1,0 +1,92 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin" >
+
+        <ProgressBar
+            android:id="@+id/student_repair_form_activity_progressbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <TextView
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/repair_activity_tv_head_space_bottom"
+            android:text="@string/student_repair_form_activity_tv_formname" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="?android:attr/dividerHorizontal"
+            android:dividerPadding="5dp"
+            android:orientation="horizontal"
+            android:showDividers="middle" >
+
+            <TextView
+                android:id="@+id/student_repair_form_activity_tv_Date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-light"
+                android:paddingLeft="5dp"
+                android:text="@string/student_repair_form_activity_tv_date"
+                android:textColor="@android:color/black"
+                android:textSize="25sp" />
+
+            <ImageButton
+                android:id="@+id/student_repair_form_activity_imbtn_ChangeDate"
+                style="@android:style/Widget.Holo.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_date"
+                android:tint="@android:color/holo_blue_light" />
+        </LinearLayout>
+
+        <TextView
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/repair_activity_tv_head_space_bottom"
+            android:text="@string/student_repair_form_activity_tv_baoxiuxiangmu" />
+
+        <EditText
+            android:id="@+id/student_repair_form_activity_tv_baoxiuxiangmu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:inputType="textMultiLine"
+            android:maxLines="10"
+            android:textColorHint="@drawable/student_repair_form_activity_tv_baoxiuxaingmu" />
+
+        <TextView
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/repair_activity_tv_head_space_bottom"
+            android:text="@string/student_repair_form_activity_tv_photo" />
+
+        <Button
+            android:id="@+id/student_repair_form_activity_btn_photo"
+            android:layout_width="60dp"
+            android:layout_height="48dp"
+            android:text="@string/student_repair_form_activity_btn_photo" />
+
+        <Button
+            android:id="@+id/student_repair_form_activity_btn_uploading"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:text="@string/student_repair_form_activity_btn_uploading" />
+    </LinearLayout>
+
+</ScrollView>
